@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "font1";
+  src: url(./Assets/fonts/Roboto-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "font1", sans-serif;
+  outline: none;
+  text-align: center;
+}
+
+h1 {
+  margin: 50px auto 30px;
+  letter-spacing: 1px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main h2 {
+  letter-spacing: 1px;
+}
+main span {
+  font-size: 6rem;
+}
+main #content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main #content #play {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 25px 60px;
+  cursor: pointer;
+  background: blue;
+  color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 20px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main #content #play:hover {
+  background: rgba(0, 0, 255, 0.697);
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
+}
+main #content .btn {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  height: 75px;
+  width: 150px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  border-radius: 20px;
+  border: 1px solid blue;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  z-index: 10;
+}
+main #content .btn:hover {
+  background: rgba(0, 0, 255, 0.204);
+  -webkit-transform: scale(102%);
+      -ms-transform: scale(102%);
+          transform: scale(102%);
+}
+main #content .btn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  z-index: 1;
+}
+main #content .btn img {
+  height: 40px;
+  width: 40px;
+}/*# sourceMappingURL=index.css.map */

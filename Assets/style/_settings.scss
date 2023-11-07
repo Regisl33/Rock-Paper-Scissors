@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "font1";
+  src: url(./Assets/fonts/Roboto-Regular.ttf);
+}
+$font1: "font1", sans-serif;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+  outline: none;
+  text-align: center;
+}
