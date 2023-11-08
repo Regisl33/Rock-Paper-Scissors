@@ -36,7 +36,7 @@ const display = {
       <button id="next">Continue</button>
       <button id="quit">End</button>
       `;
-    } else {
+    } else if (result) {
       cpuScore++;
       content.innerHTML = `
       <h3>Sorry... Computer Won! </h3>
@@ -57,6 +57,7 @@ const logic = {
     player = id;
     this.cpuRandom();
     if (player === cpu) {
+      result = null;
       alert("Tied Match");
     } else if (player === "rock") {
       cpu === "paper" ? (result = "computer") : (result = "player");
@@ -72,7 +73,11 @@ const logic = {
 //Application
 display.displayGame();
 content.addEventListener("click", (e) => {
-  if (e.target.id === "rock" || "paper" || "scissors") {
+  if (
+    e.target.id === "rock" ||
+    e.target.id === "paper" ||
+    e.target.id === "scissors"
+  ) {
     logic.gameLogic(e.target.id);
   } else if (e.target.id === "next") {
     display.displayGame();
