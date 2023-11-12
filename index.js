@@ -1,5 +1,5 @@
 const btn = document.querySelectorAll(".btn");
-let gamePlaying = true;
+let gamePlaying = false;
 let cpuScore = 0,
   playerScore = 0,
   cpu,
@@ -32,16 +32,34 @@ const display = {
     if (result === "player") {
       playerScore++;
       content.innerHTML = `
-      <h3> Player WON!!! Congratulation! </h3>
-      <button id="next">Continue</button>
-      <button id="quit">End</button>
+      <div class="container">
+        <figure class="result">
+          <img src="./Assets/img/${player}.png" alt="${player}"/>
+          <span>VS</span>
+          <img src="./Assets/img/${cpu}.png" alt="${cpu}"/>
+        </figure>
+        <h3> Player WON!!! Congratulation! </h3>
+        <div class="btn-container">
+          <button id="next">Continue</button>
+          <button id="quit">End</button>
+        </div>
+      </div>
       `;
     } else if (result) {
       cpuScore++;
       content.innerHTML = `
-      <h3>Sorry... Computer Won! </h3>
-      <button id="next">Continue</button>
-      <button id="quit">End</button>
+      <div class="container">
+        <figure class="result">
+          <img src="./Assets/img/${player}.png" alt="${player}"/>
+          <span>VS</span>
+          <img src="./Assets/img/${cpu}.png" alt="${cpu}"/>
+        </figure>
+        <h3>Sorry... Computer Won! </h3>
+        <div class="btn-container">
+          <button id="next">Continue</button>
+          <button id="quit">End</button>
+        </div>
+      </div>
       `;
     }
     cpuScoreDisplay.textContent = cpuScore;
@@ -83,6 +101,13 @@ content.addEventListener("click", (e) => {
     display.displayGame();
   } else if (e.target.id === "quit") {
     gamePlaying = false;
+    cpuScore = 0;
+    playerScore = 0;
+    cpuScoreDisplay.textContent = cpuScore;
+    playerScoreDisplay.textContent = playerScore;
+    display.displayGame();
+  } else if (e.target.id === "play") {
+    gamePlaying = true;
     display.displayGame();
   }
 });

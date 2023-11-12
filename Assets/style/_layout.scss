@@ -1,19 +1,22 @@
 h1{
   margin: 50px auto 30px;
-  letter-spacing: 1px;
+  @include textShadow;
 }
 main{
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1100px;
+  width: 90%;
+  min-width: 650px;
   margin: 0 auto;
 
   h2{
-    letter-spacing: 1px;
+    @include textShadow;
   }
 
   span{
     font-size: 6rem;
+    @include textShadow;
   }
 
   #content{
@@ -21,60 +24,100 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include justify(center);
+
 
     #play{
       text-transform: uppercase;
       font-size: 1.5rem;
       font-weight: bold;
-      letter-spacing: 2px;
+      @include textShadow;
       padding: 25px 60px;
       cursor: pointer;
-      background: blue;
+      background: $color2;
       color: whitesmoke;
-      border: 2px solid black;
+      border: 1px solid $color4;
       border-radius: 20px;
       transition: 0.2s ease;
+      box-shadow: 2px 2px 5px 1px $color4;
 
       &:hover{
-        background: rgba(0, 0, 255, 0.697);
         transform: scale(105%);
       }
     }
     .btn{
       text-transform: capitalize;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: bold;
       height: 75px;
-      width: 150px;
-      margin: 0 10px;
+      width: 175px;
+      margin: 0 20px;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: none;
+      @include justify(center);
+      background: $color1;
       border-radius: 20px;
-      border: 1px solid blue;
+      border: 3px inset $color2;
       transition: 0.2s ease;
-      z-index: 10;
+      letter-spacing: 1px;
+      box-shadow: 2px 2px 5px 1px $color4;
 
       &:hover{
-        background: rgba(0, 0, 255, 0.204);
-        transform: scale(102%);
+        transform: scale(103%);
+        border: 3px outset $color2;
       }
 
       span{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include justify(center);
         margin-left: 10px;
-        z-index: 1;
       }
 
       img{
         height: 40px;
         width: 40px;
+      }
+    }
+    .container{
+      .result{
+        background: $color1;
+        border-radius: 10px;
+        padding: 50px;
+        height: 300px;
+        max-width: 1100px;
+        margin: 0 auto;
+        @include justify(space-between);
+        color: $color2;
+        box-shadow: 2px 2px 5px 1px $color4;
+    
+        img{
+          width: 300px;
+          height: 300px;
+          object-fit: fill;
+        }
+      }
+      h3{
+        margin: 50px auto;
+        @include textShadow;
+      }
+      .btn-container{
+        @include justify(space-around);
+      }  
+      button{
+        font-size: 1.5rem;
+        width: 175px;
+        @include textShadow;
+        @include justify(center);
+        padding: 25px 60px;
+        cursor: pointer;
+        background: $color2;
+        color: whitesmoke;
+        border: 1px solid $color4;
+        border-radius: 20px;
+        transition: 0.2s ease;
+        box-shadow: 2px 2px 5px 1px $color4;
+  
+        &:hover{
+          transform: scale(105%);
+        }
       }
     }
   }

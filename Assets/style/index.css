@@ -12,9 +12,15 @@
   text-align: center;
 }
 
+body {
+  color: whitesmoke;
+  background: rgb(40, 40, 40);
+}
+
 h1 {
   margin: 50px auto 30px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
 }
 
 main {
@@ -24,14 +30,19 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1100px;
+  width: 90%;
+  min-width: 650px;
   margin: 0 auto;
 }
 main h2 {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
 }
 main span {
   font-size: 6rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
 }
 main #content {
   position: absolute;
@@ -43,8 +54,9 @@ main #content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -54,27 +66,30 @@ main #content #play {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
   padding: 25px 60px;
   cursor: pointer;
-  background: blue;
+  background: rgb(40, 81, 228);
   color: whitesmoke;
-  border: 2px solid black;
+  border: 1px solid rgba(245, 245, 245, 0.654);
   border-radius: 20px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+          box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
 }
 main #content #play:hover {
-  background: rgba(0, 0, 255, 0.697);
   -webkit-transform: scale(105%);
       -ms-transform: scale(105%);
           transform: scale(105%);
 }
 main #content .btn {
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
   height: 75px;
-  width: 150px;
-  margin: 0 10px;
+  width: 175px;
+  margin: 0 20px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,18 +100,20 @@ main #content .btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: none;
+  background: rgb(247, 247, 247);
   border-radius: 20px;
-  border: 1px solid blue;
+  border: 3px inset rgb(40, 81, 228);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  z-index: 10;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+          box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
 }
 main #content .btn:hover {
-  background: rgba(0, 0, 255, 0.204);
-  -webkit-transform: scale(102%);
-      -ms-transform: scale(102%);
-          transform: scale(102%);
+  -webkit-transform: scale(103%);
+      -ms-transform: scale(103%);
+          transform: scale(103%);
+  border: 3px outset rgb(40, 81, 228);
 }
 main #content .btn span {
   display: -webkit-box;
@@ -109,9 +126,79 @@ main #content .btn span {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
-  z-index: 1;
 }
 main #content .btn img {
   height: 40px;
   width: 40px;
+}
+main #content .container .result {
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 50px;
+  height: 300px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(40, 81, 228);
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+          box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+}
+main #content .container .result img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+main #content .container h3 {
+  margin: 50px auto;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
+}
+main #content .container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main #content .container button {
+  font-size: 1.5rem;
+  width: 175px;
+  letter-spacing: 2px;
+  text-shadow: 2px 1px 7px rgba(245, 245, 245, 0.654);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 60px;
+  cursor: pointer;
+  background: rgb(40, 81, 228);
+  color: whitesmoke;
+  border: 1px solid rgba(245, 245, 245, 0.654);
+  border-radius: 20px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+          box-shadow: 2px 2px 5px 1px rgba(245, 245, 245, 0.654);
+}
+main #content .container button:hover {
+  -webkit-transform: scale(105%);
+      -ms-transform: scale(105%);
+          transform: scale(105%);
 }/*# sourceMappingURL=index.css.map */
