@@ -61,6 +61,21 @@ const display = {
         </div>
       </div>
       `;
+    } else {
+      content.innerHTML = `
+      <div class="container">
+        <figure class="result">
+          <img src="./Assets/img/${player}.png" alt="${player}"/>
+          <span>VS</span>
+          <img src="./Assets/img/${cpu}.png" alt="${cpu}"/>
+        </figure>
+        <h3>Tied Match!</h3>
+        <div class="btn-container">
+          <button id="next">Continue</button>
+          <button id="quit">End</button>
+        </div>
+      </div>
+      `;
     }
     cpuScoreDisplay.textContent = cpuScore;
     playerScoreDisplay.textContent = playerScore;
@@ -76,7 +91,6 @@ const logic = {
     this.cpuRandom();
     if (player === cpu) {
       result = null;
-      alert("Tied Match");
     } else if (player === "rock") {
       cpu === "paper" ? (result = "computer") : (result = "player");
     } else if (player === "paper") {
